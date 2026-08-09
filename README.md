@@ -2,12 +2,7 @@
 
 A Java-based console application designed to manage student enrollments, search student records, and sort students alphabetically. Built as part of object-oriented programming coursework using structured packages, input validation, and proper JavaDoc documentation.
 
-The assignment focuses on building and evolving a **Student Management System** while practicing:
-- Java classes and object-oriented design
-- Package organization (`models`, `services`, `mainapp`)
-- Control structures (`switch`, loops)
-- Array-based sorting and searching
-- JavaDoc documentation generation
+## Features
 
 - **Add Student**: Enrolls new students with validated SLIIT Student IDs (`ITXXXXXXXX`) and capitalized names.
 - **Display All Students**: Prints the list of all registered students.
