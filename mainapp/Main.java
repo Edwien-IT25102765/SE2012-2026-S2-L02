@@ -72,11 +72,19 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.print("Enter Student ID to search: ");
-                    String searchId = scanner.nextLine();
+                    String searchId;
+                    while (true) {
+                        System.out.print("Enter Student ID to search (e.g., IT25102765): ");
+                        searchId = scanner.nextLine().trim();
+                        if (searchId.matches("^IT\\d{8}$")) {
+                            break;
+                        }
+                        System.out.println("Invalid ID format! Must start with 'IT' followed by 8 digits.");
+                    }
+
                     boolean found = false;
                     for (int i = 0; i < studentCount; i++) {
-                        if (student[i].getId().equals(searchId)) {
+                        if (student[i].getId().equalsIgnoreCase(searchId)) {
                             System.out.println("Student found: " + student[i]);
                             found = true;
                             break;
