@@ -22,7 +22,7 @@ A Java-based console application designed to manage student enrollments, search 
 │   └── Main.java              # Console user interface and application execution
 ├── docs/                      # Generated JavaDoc HTML documentation
 └── README.md                  # Project documentation and run instructions
-
+```
 
 ## How to Compile and Run
 
@@ -37,27 +37,28 @@ java mainapp.Main
 Generate JavaDoc documentation:
 javadoc -d docs models/*.java services/*.java mainapp/*.java
 
-##How to Use the Application
+## How to Use the Application
 
 When you run the application, an interactive menu will display:
 
 --- Student Management System ---
+
 1. Add Student
 2. Display All Students
 3. Search Student by ID
 4. Sort Students by Name
 5. Exit
-Choose an option: 
+Choose an option:
 Option Details:
 
-1. Add Student:
-Enter Student ID in the format IT followed by 8 digits 
-Enter Student Name starting with a capital letter 
+6. Add Student:
+Enter Student ID in the format IT followed by 8 digits
+Enter Student Name starting with a capital letter
 
-2. Display All Students: Displays all registered student records.
+7. Display All Students: Displays all registered student records.
 
-3. Search Student by ID: Type the exact Student ID to search the database.
+8. Search Student by ID: Type the exact Student ID to search the database.
 
-4. Sort Students by Name: Alphabetically reorders student entries.
+9. Sort Students by Name: Alphabetically reorders student entries.
 
-5. Exit: Closes the program cleanly.
+10. Exit: Closes the program cleanly.
