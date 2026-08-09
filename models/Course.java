@@ -10,7 +10,7 @@ public class Course {
     /**
      * Constructs a new Course object.
      * 
-     * @param code  The course code (e.g., SE2031).
+     * @param code  The course code (e.g., SE2012).
      * @param title The title/description of the course.
      */
 
