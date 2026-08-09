@@ -1,7 +1,6 @@
-# SE2031 Practical 2 - Student Management System
+# Student Management System
 
-## Repository Context
-This repository is for **SE2031 Java Programming - Practical 2**.
+A Java-based console application designed to manage student enrollments, search student records, and sort students alphabetically. Built as part of object-oriented programming coursework using structured packages, input validation, and proper JavaDoc documentation.
 
 The assignment focuses on building and evolving a **Student Management System** while practicing:
 - Java classes and object-oriented design
@@ -10,88 +9,60 @@ The assignment focuses on building and evolving a **Student Management System** 
 - Array-based sorting and searching
 - JavaDoc documentation generation
 
-Core classes expected by the practical:
-- `Student` (student id and name)
-- `Course` (course code and title)
-- `Main` (menu, input handling, program flow)
-- `EnrollmentManager` (after package refactor)
+- **Add Student**: Enrolls new students with validated SLIIT Student IDs (`ITXXXXXXXX`) and capitalized names.
+- **Display All Students**: Prints the list of all registered students.
+- **Search Student by ID**: Searches for a student using their unique ID string.
+- **Sort Students by Name**: Uses bubble sort to arrange students alphabetically by name.
+- **Input Validation**: Prevents application crashes from non-numeric menu selections or invalid text entries.
 
-## Suggested Project Structures
-
-### Part 1 (No packages)
+## Project Structure
 
 ```text
-StudentManagement/
-|-- Student.java
-|-- Course.java
-`-- Main.java
-```
+├── models/
+│   ├── Student.java           # Student entity class
+│   └── Course.java            # Course entity class
+├── services/
+│   └── EnrollmentManager.java # Business logic for course enrollment
+├── mainapp/
+│   └── Main.java              # Console user interface and application execution
+├── docs/                      # Generated JavaDoc HTML documentation
+└── README.md                  # Project documentation and run instructions
 
-### Part 2+ (With packages)
-
-```text
-StudentManagement/
-|-- models/
-|   |-- Student.java
-|   `-- Course.java
-|-- services/
-|   `-- EnrollmentManager.java
-`-- mainapp/
-    `-- Main.java
-```
-
-## Prerequisites
-- JDK 17+ (or your module-required Java version)
-- Command prompt/terminal
-
-Check installation:
-
-```bash
-java -version
-javac -version
-```
 
 ## How to Compile and Run
 
-### Option A: Part 1 (without packages)
-Run these commands from the folder containing `Main.java`:
+Open your terminal in the project root directory.
 
-```bash
-javac Student.java Course.java Main.java
-java Main
-```
+Compile all source files across packages:
+javac mainapp/Main.java models/*.java services/*.java
 
-### Option B: Part 2+ (with packages)
-Run these commands from the project root (`StudentManagement/`):
-
-```bash
-javac models/*.java services/*.java mainapp/Main.java
+Run the Application:
 java mainapp.Main
-```
 
-## JavaDoc Generation
-After adding JavaDoc comments to all public classes and methods:
+Generate JavaDoc documentation:
+javadoc -d docs models/*.java services/*.java mainapp/*.java
 
-```bash
-javadoc -d docs models/*.java services/*.java
-```
+##How to Use the Application
 
-Then open:
-- `docs/index.html`
+When you run the application, an interactive menu will display:
 
-## Functional Expectations
-Your final program should support:
-- Adding/enrolling students through a menu
-- Listing students
-- Searching student by ID (linear search)
-- Sorting students by name (for example, bubble sort)
-- Exit option
+--- Student Management System ---
+1. Add Student
+2. Display All Students
+3. Search Student by ID
+4. Sort Students by Name
+5. Exit
+Choose an option: 
+Option Details:
 
-## Submission Checklist
-- [ ] Initial multi-class version completed
-- [ ] Refactored into packages
-- [ ] Menu implemented with `switch` and loops
-- [ ] Array-based searching and sorting added
-- [ ] JavaDoc comments written for public APIs
-- [ ] JavaDoc HTML generated
-- [ ] Repository includes this `README.md` with run instructions
+1. Add Student:
+Enter Student ID in the format IT followed by 8 digits 
+Enter Student Name starting with a capital letter 
+
+2. Display All Students: Displays all registered student records.
+
+3. Search Student by ID: Type the exact Student ID to search the database.
+
+4. Sort Students by Name: Alphabetically reorders student entries.
+
+5. Exit: Closes the program cleanly.
